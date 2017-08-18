@@ -1,0 +1,44 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="type" type="xs:string"/>
+    <xs:element name="buy" type="xs:float"/>
+    <xs:element name="sell" type="xs:float"/>
+    <xs:element name="quantity" type="xs:short"/>
+    <xs:element name="comments" type="xs:string"/>
+    <xs:element name="rate">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="type"/>
+                <xs:element ref="buy"/>
+                <xs:element ref="sell"/>
+                <xs:element ref="quantity"/>
+                <xs:element ref="comments" minOccurs="0"/>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="cur" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="rates">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="rate" maxOccurs="unbounded" minOccurs="0"/>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="unit"/>
+            <xs:attribute type="xs:long" name="okato"/>
+            <xs:attribute type="xs:string" name="date"/>
+            <xs:attribute type="xs:string" name="city"/>
+            <xs:attribute type="xs:string" name="name"/>
+            <xs:attribute type="xs:string" name="address"/>
+            <xs:attribute type="xs:string" name="phone"/>
+            <xs:attribute type="xs:string" name="hours"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="bank">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="rates"/>
+            </xs:sequence>
+            <xs:attribute type="xs:short" name="license"/>
+            <xs:attribute type="xs:float" name="xml-version"/>
+            <xs:attribute type="xs:string" name="encoding"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

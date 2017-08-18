@@ -1,0 +1,17 @@
+<bank license="2562" xml-version="1.0" encoding="UTF-8">
+    <rates unit="1254200000000" okato="95401000000" date="2017-08-18 13:47:16" city="Абакан" name="Операционный офис «Абаканский/19» Филиала ПАО «БИНБАНК»" address="Россия, 655017, Республика Хакасия, г. Абакан, ул. Кирова, д. 103" phone="+1 (303) 499-7111" hours="пн-пт 09:00-18:00">
+        <rate cur="USD">
+            <type>cash</type>
+            <buy>59.00</buy>
+            <sell>59.75</sell>
+            <quantity>1</quantity>
+            <coments/>
+        </rate>
+        <rate cur="EUR">
+            <type>cash</type>
+            <buy>69.20</buy>
+            <sell>70.07</sell>
+            <quantity>1</quantity>
+        </rate>
+    </rates>
+</bank>
